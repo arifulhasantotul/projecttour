@@ -3,7 +3,6 @@
 :root {
     --orange: #ffa500;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -24,6 +23,8 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
 }
+
+/* header start */
 header {
     position: fixed;
     top: 0;
@@ -36,19 +37,62 @@ header {
     z-index: 1000;
     padding: 2rem 9%;
 }
-
 header .logo {
     font-size: 2.5rem;
     font-weight: bolder;
     color: #fff;
     text-transform: uppercase;
 }
-header .logo span{
+header .logo span {
     color: var(--orange);
 }
-
-header .navbar a{
+header .navbar a {
     color: #fff;
     font-size: 2rem;
-    margin: 0 .8rem;
+    margin: 0 0.8rem;
+}
+header .navbar a:hover {
+    color: var(--orange);
+}
+header .icons {
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+header .icons i:hover {
+    color: var(--orange);
+}
+header .search_bar_container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 2rem;
+    background: #333;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+header .search_bar_container.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+header .search_bar_container #search_bar {
+    width: 100%;
+    padding: 1rem;
+    transition: none;
+    color: #333;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+}
+header .search_bar_container label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+header .search_bar_container label:hover {
+    color: var(--orange);
 }
