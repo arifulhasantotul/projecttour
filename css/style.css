@@ -7,6 +7,7 @@
     --search_bg: rgba(0, 0, 0, 0.7);
     --hide_bar: polygon(0 0, 100% 0, 100% 0, 0 0);
     --open_bar: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    --top_border: 0.1rem solid rgba(255, 255, 255, 0.2);
     --center_padding: 2rem 9%;
 }
 * {
@@ -38,12 +39,19 @@ html {
     border: 0.2rem solid var(--orange);
     cursor: pointer;
     font-size: 1.7rem;
+    border-radius: 0.5rem;
 }
 
 .btn:hover {
     background: rgba(255, 165, 0, 0.2);
     color: var(--orange);
 }
+header,
+main,
+footer{
+    padding: var(--center_padding);
+}
+
 /* header start */
 header {
     position: fixed;
@@ -55,10 +63,15 @@ header {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    padding: var(--center_padding);
 }
-header #menu_bar{
-    
+header #menu_bar {
+    color: var(--white);
+    border: 0.1rem solid var(--white);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
 }
 header .logo {
     font-size: 2.5rem;
@@ -77,7 +90,7 @@ header .navbar a {
 header .navbar a:hover {
     color: var(--orange);
 }
-header .icons i{
+header .icons i {
     font-size: 2.5rem;
     color: var(--white);
     cursor: pointer;
@@ -93,7 +106,7 @@ header .search_bar_container {
     right: 0;
     padding: 1.5rem 2rem;
     background: var(--header_bg);
-    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-top: var(--top_border);
     display: flex;
     align-items: center;
     z-index: 1001;
@@ -131,7 +144,7 @@ header .search_bar_container label:hover {
     align-items: center;
     justify-content: center;
 }
-.login_form_container.active{
+.login_form_container.active {
     top: 0%;
 }
 .login_form_container form {
@@ -166,7 +179,7 @@ header .search_bar_container label:hover {
 .login_form_container form label {
     font-size: 1.5rem;
 }
-.login_form_container .form .btn {
+.login_form_container form .btn {
     display: block;
     width: 100%;
 }
@@ -189,4 +202,67 @@ header .search_bar_container label:hover {
     font-size: 4rem;
     color: var(--search_bg);
     cursor: pointer;
+}
+
+/* main start  */
+
+/* home start */
+section .home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* home end  */
+
+/* main end  */
+
+/* media queries */
+
+/* 1200px screen */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+
+/* 991px screen */
+@media (max-width: 991px) {
+    header {
+        padding: 2rem;
+    }
+}
+
+/* 768px screen */
+@media (max-width: 768px) {
+    header #menu_bar {
+        display: initial;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: #333;
+        border-top: var(--top_border);
+        padding: 1rem 2rem;
+        clip-path: var(--hide_bar);
+    }
+    header .navbar.active {
+        clip-path: var(--open_bar);
+    }
+    header .navbar a {
+        display: block;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        background: #222;
+    }
+}
+
+/* 450px screen */
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
 }
