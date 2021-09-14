@@ -62,14 +62,12 @@
                     <input
                         class="box"
                         type="email"
-                        id=""
                         placeholder="Enter your email"
                     />
                     <!-- pass -->
                     <input
                         class="box"
                         type="password"
-                        id=""
                         placeholder="Enter your password"
                     />
                     <!-- submit  -->
@@ -90,21 +88,41 @@
 
         <!-- main start  -->
         <main>
-
             <!-- home sec start  -->
             <section id="home" class="home">
-
-                <!-- content div start  -->
-                <div class="content">
+                <!-- content article start  -->
+                <article class="content">
                     <h3>Adventure is worthwhile</h3>
                     <p>Discover new places with us, adventure awaits</p>
                     <a href="#" class="btn">Discover more</a>
-                </div>
-                <!-- content div end  -->
+                </article>
+                <!-- content article end  -->
 
+                <!-- video control btn  -->
+                <article class="controls">
+                    <span
+                        class="video_btn active"
+                        data-src="images/vid-1.mp4"
+                    ></span>
+                    <span class="video_btn" data-src="images/vid-2.mp4"></span>
+                    <span class="video_btn" data-src="images/vid-3.mp4"></span>
+                    <span class="video_btn" data-src="images/vid-4.mp4"></span>
+                    <span class="video_btn" data-src="images/vid-5.mp4"></span>
+                </article>
+
+                <!-- video file start  -->
+                <article class="video_container">
+                    <video
+                        src="images/vid-1.mp4"
+                        id="video_slider"
+                        loop
+                        autoplay
+                        muted
+                    ></video>
+                </article>
+                <!-- video file end  -->
             </section>
             <!-- home sec end  -->
-
         </main>
         <!-- main end  -->
 

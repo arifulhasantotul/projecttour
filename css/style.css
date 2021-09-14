@@ -47,8 +47,7 @@ html {
     color: var(--orange);
 }
 header,
-main,
-footer{
+footer {
     padding: var(--center_padding);
 }
 
@@ -207,16 +206,67 @@ header .search_bar_container label:hover {
 /* main start  */
 
 /* home start */
-section .home{
+section.home {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
 }
+section.home .content {
+    text-align: center;
+    padding: var(--center_padding);
+}
+section.home .content h3 {
+    font-size: 4.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+section.home .content p {
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 0.5rem 0;
+}
+section.home .video_container video {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding: none;
+}
+section.home .controls{
+    padding: var(--center_padding);
+    padding: 1rem;
+    border-radius: 5rem;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    top: 10rem;
+}
+section.home .controls .video_btn{
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: var(--white);
+    margin: 0 .5rem;
+    cursor: pointer;
+}
+section.home .controls .video_btn.active{
+    background: var(--orange);
+}
+
+
 /* home end  */
 
 /* main end  */
 
-/* media queries */
+/* media queries start */
 
 /* 1200px screen */
 @media (max-width: 1200px) {
@@ -224,7 +274,6 @@ section .home{
         font-size: 55%;
     }
 }
-
 
 /* 991px screen */
 @media (max-width: 991px) {

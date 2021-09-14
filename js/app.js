@@ -15,6 +15,15 @@ const menu = document.getElementById("menu_bar");
 // access navbar
 const navbar = document.querySelector(".navbar");
 
+const videoBtn = document.querySelectorAll(".video_btn");
+// access every btn
+videoBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        document.querySelector(".controls .active").classList.remove("active");
+        btn.classList.add("active");
+    });
+});
+
 // onscroll remove button and container
 const scrollRmv = (btnName, containerName) => {
     btnName.classList.remove("fa-times");
