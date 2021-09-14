@@ -9,6 +9,7 @@
     --open_bar: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     --top_border: 0.1rem solid rgba(255, 255, 255, 0.2);
     --center_padding: 2rem 9%;
+    --bg_btn__hover: rgba(255, 165, 0, 0.2);
 }
 * {
     margin: 0;
@@ -43,12 +44,28 @@ html {
 }
 
 .btn:hover {
-    background: rgba(255, 165, 0, 0.2);
+    background: var(--bg_btn__hover);
     color: var(--orange);
 }
 header,
 footer {
     padding: var(--center_padding);
+}
+.heading {
+    text-align: center;
+    padding: 2.5rem 0;
+}
+.heading span {
+    font-size: 3.5rem;
+    background: var(--bg_btn__hover);
+    color: var(--orange);
+    border-radius: 0.5rem;
+    padding: 0.2rem 1rem;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.heading span.space {
+    background: none;
 }
 
 /* header start */
@@ -240,7 +257,7 @@ section.home .video_container video {
     object-fit: cover;
     padding: none;
 }
-section.home .controls{
+section.home .controls {
     padding: var(--center_padding);
     padding: 1rem;
     border-radius: 5rem;
@@ -248,21 +265,57 @@ section.home .controls{
     position: relative;
     top: 10rem;
 }
-section.home .controls .video_btn{
+section.home .controls .video_btn {
     height: 2rem;
     width: 2rem;
     display: inline-block;
     border-radius: 50%;
     background: var(--white);
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
     cursor: pointer;
 }
-section.home .controls .video_btn.active{
+section.home .controls .video_btn.active {
     background: var(--orange);
 }
 
-
 /* home end  */
+
+/* book start  */
+section.book .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+section.book .row .image {
+    flex: 1 1 40rem;
+}
+section.book .row .image img {
+    width: 100%;
+}
+section.book .row form{
+    flex:1 1 40rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1) ;
+    border-radius: .5rem;
+}
+section.book .row form .inputBox{
+    padding: .5rem 0;
+}
+section.book .row form .inputBox input{
+    width: 100%;
+    padding: 1rem;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+}
+section.book .row form .inputBox h3{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #666;
+}
+/* book end  */
 
 /* main end  */
 
@@ -313,5 +366,8 @@ section.home .controls .video_btn.active{
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+    .heading span {
+        font-size: 2.5rem;
     }
 }
