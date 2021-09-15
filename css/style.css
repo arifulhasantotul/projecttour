@@ -286,6 +286,7 @@ section.book .row {
     flex-wrap: wrap;
     gap: 1.5rem;
     align-items: center;
+    padding: var(--center_padding);
 }
 section.book .row .image {
     flex: 1 1 40rem;
@@ -475,10 +476,52 @@ section.review .box .stars i{
     color: var(--orange);
     font-size: 1.5rem;
 }
-section.review .box {
+/* review end  */
+
+/* contact start  */
+section.contact {
+    padding: var(--center_padding);
+}
+section.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+section.contact .row .image{
+    flex: 1 1 35rem;
+}
+section.contact .row .image img{
+    width: 100%;
+}
+section.contact .row form{
+    flex: 1 1 50rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+}
+section.contact .row form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
 }
-/* review end  */
+section.contact .row form .inputBox input,
+section.contact .row form textarea{
+    width: 49%;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    background: #f7f7f7;
+    text-transform: none;
+}
+section.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+    width: 100%;
+}
+/* contact end  */
 
 /* main end  */
 
@@ -532,5 +575,8 @@ section.review .box {
     }
     .heading span {
         font-size: 2.5rem;
+    }
+    section.contact .row form .inputBox input{
+        width: 100%;
     }
 }
