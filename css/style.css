@@ -523,7 +523,17 @@ section.contact .row form textarea{
 }
 /* contact end  */
 
+/* brand start */
+section.brand_container{
+    padding: var(--center_padding);
+}
+/* brand end */
+
 /* main end  */
+
+/* footer start  */
+
+/* footer end  */
 
 /* media queries start */
 
