@@ -149,7 +149,7 @@ header .search_bar_container label:hover {
     color: var(--orange);
 }
 
-.login_form_container {
+header .login_form_container {
     position: fixed;
     top: 120%;
     left: 0%;
@@ -160,24 +160,24 @@ header .search_bar_container label:hover {
     align-items: center;
     justify-content: center;
 }
-.login_form_container.active {
+header .login_form_container.active {
     top: 0%;
 }
-.login_form_container form {
+header .login_form_container form {
     margin: 2rem;
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
     background: var(--white);
     width: 50rem;
 }
-.login_form_container form h3 {
+header .login_form_container form h3 {
     font-size: 3rem;
     color: var(--header_bg);
     text-transform: uppercase;
     text-align: center;
     padding: 1rem 0;
 }
-.login_form_container form .box {
+header .login_form_container form .box {
     width: 100%;
     padding: 1rem;
     font-size: 1.7rem;
@@ -186,32 +186,32 @@ header .search_bar_container label:hover {
     bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
     text-transform: none;
 }
-.login_form_container form .box:focus {
+header .login_form_container form .box:focus {
     border-color: var(--orange);
 }
-.login_form_container form #remember {
+header .login_form_container form #remember {
     margin: 2rem 0;
 }
-.login_form_container form label {
+header .login_form_container form label {
     font-size: 1.5rem;
 }
-.login_form_container form .btn {
+header .login_form_container form .btn {
     display: block;
     width: 100%;
 }
-.login_form_container form p {
+header .login_form_container form p {
     padding: 0.5rem 0;
     font-size: 1.5rem;
     color: #666;
 }
-.login_form_container form p a {
+header .login_form_container form p a {
     color: var(--orange);
 }
-.login_form_container form p a:hover {
+header .login_form_container form p a:hover {
     color:  var(--header_bg);
     text-decoration: underline;
 }
-.login_form_container #form_close {
+header .login_form_container #form_close {
     position: relative;
     top: -15rem;
     right: -49.5rem;
@@ -365,6 +365,38 @@ section.packages .box_container .box .content .price span{
     text-decoration: line-through;
 }
 /* packages end  */
+
+/* services start */
+section.services .box_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding: var(--center_padding);
+}
+section.services .box_container .box{
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+}
+section.services .box_container .box i{
+    padding: 1rem;
+    font-size: 5rem;
+    color: var(--orange);
+}
+section.services .box_container .box h3{
+    font-size: 2.5rem;
+    color: var(--header_bg);
+}
+section.services .box_container .box p{
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+section.services .box_container .box:hover{
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+/* services end */
 
 /* main end  */
 
