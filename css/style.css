@@ -442,6 +442,44 @@ section.gallery .box_container .box .content p {
 }
 /* gallery end  */
 
+/* review start  */
+section.review {
+    padding: var(--center_padding);
+}
+section.review .review_slider{
+    padding-bottom: 2rem;
+}
+section.review .box{
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+}
+section.review .box img{
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+section.review .box h3{
+    color: var(--header_bg);
+    font-size: 2.5rem;
+}
+section.review .box p{
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+section.review .box .stars i{
+    color: var(--orange);
+    font-size: 1.5rem;
+}
+section.review .box {
+
+}
+/* review end  */
+
 /* main end  */
 
 /* media queries start */
